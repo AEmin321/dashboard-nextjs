@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  padding: 0.5rem 0.9rem;
+  gap: 10px;
+  align-items: center;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+.container:hover {
+  background-color: rgb(54, 54, 54);
+  border-radius: 5px;
+}
+.active {
+  background-color: var(--main-secondary);
+  border-radius: 5px;
+}
+.activeIcon {
+  color: var(--main-color);
+}

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+.sideMenu {
+  flex: 1;
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+  height: 100vh;
+}
+.content {
+  flex: 4.5;
+  padding: 1.5rem;
+}

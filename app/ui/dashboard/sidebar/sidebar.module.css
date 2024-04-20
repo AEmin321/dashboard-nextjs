@@ -1,0 +1,60 @@
+.container {
+  position: sticky;
+}
+.logoContainer {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 5px 0 1.1rem 14px;
+}
+.list {
+  list-style: none;
+}
+.part {
+  color: var(--txt-secondary);
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0.8rem 0 0.8rem 0.9rem;
+}
+.profileContainer {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 2.3rem;
+  padding-top: 6px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  color: var(--txt-primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.role {
+  color: var(--txt-secondary);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+.userImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  padding-top: 0.7rem;
+  padding-left: 3px;
+
+  color: var(--txt-secondary);
+  cursor: pointer;
+}
+.logoutTxt {
+  padding-left: 0.8rem;
+  font-size: 13px;
+}
