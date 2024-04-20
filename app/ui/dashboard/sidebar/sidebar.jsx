@@ -107,10 +107,10 @@ const Sidebar = () => {
             <span className={styles.role}>Admin</span>
           </div>
         </div>
-        <div className={styles.logoutBtn}>
+        <button className={styles.logoutBtn}>
           <MdLogout fontSize="1.5rem" />
           <span className={styles.logoutTxt}>Log out</span>
-        </div>
+        </button>
       </div>
     </div>
   );

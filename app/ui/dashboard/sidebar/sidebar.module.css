@@ -50,6 +50,8 @@
   align-items: center;
   padding-top: 0.7rem;
   padding-left: 3px;
+  background-color: transparent;
+  border: none;
 
   color: var(--txt-secondary);
   cursor: pointer;
