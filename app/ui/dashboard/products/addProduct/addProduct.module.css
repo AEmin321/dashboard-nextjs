@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.productContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productImg {
+  border-radius: 50%;
+}
+.form {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.form input,
+.form textarea,
+.form select {
+  padding: 8px 12px;
+  background-color: var(--bg-alt);
+  border: none;
+  color: var(--txt-primary);
+  border-radius: 5px;
+}
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: 2px solid var(--main-color);
+  border-radius: 5px;
+}
+.form input,
+.form select {
+  width: 48%;
+}
+.form textarea {
+  width: 100%;
+}
+.form button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
