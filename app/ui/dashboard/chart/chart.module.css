@@ -1,0 +1,11 @@
+.container {
+  height: 40vh;
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem 0.8rem 2.7rem 0.8rem;
+}
+.title {
+  font-weight: 300;
+  color: var(--txt-secondary);
+  margin-bottom: 0.8rem;
+}
