@@ -1,0 +1,19 @@
+.container {
+  margin-top: 1.5rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--txt-primary);
+  background-color: var(--bg-alt);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+}

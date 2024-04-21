@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-alt);
+  padding: 6px 7px;
+  border-radius: 5px;
+}
+.input {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: var(--txt-primary);
+}
