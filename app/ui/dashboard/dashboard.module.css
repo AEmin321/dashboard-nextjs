@@ -11,3 +11,22 @@
   flex: 4.5;
   padding: 1.5rem;
 }
+.wrapper {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.main {
+  flex: 3;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.announcement {
+  flex: 1;
+}

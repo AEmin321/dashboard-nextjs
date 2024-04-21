@@ -1,0 +1,25 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.top {
+  color: var(--txt-secondary);
+  display: flex;
+  align-items: center;
+}
+.topTxt {
+  margin-left: 0.6rem;
+  font-size: 0.9rem;
+}
+.center {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.positive {
+  color: var(--main-color);
+}
