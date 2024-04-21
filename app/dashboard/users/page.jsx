@@ -2,6 +2,7 @@ import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import Image from "next/image";
 import { MdAddBox } from "react-icons/md";
 
 const Users = () => {
@@ -31,7 +32,7 @@ const Users = () => {
           <tr>
             <td>
               <div className={styles.user}>
-                <img
+                <Image
                   className={styles.userImg}
                   src="/profile.jpg"
                   width={40}

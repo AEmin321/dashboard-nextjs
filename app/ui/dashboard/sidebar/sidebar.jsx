@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./sidebar.module.css";
 import MenuLink from "./menuLink/menuLink";
+import Image from "next/image";
 import {
   MdDashboard,
   MdShoppingCart,
@@ -95,7 +96,7 @@ const Sidebar = () => {
       </ul>
       <div className={styles.profileContainer}>
         <div className={styles.profile}>
-          <img
+          <Image
             className={styles.userImage}
             src="/profile.jpg"
             width={40}
