@@ -1,0 +1,28 @@
+.contaienr {
+}
+.card {
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+.title {
+  font-size: 1.2rem;
+}
+.desc p {
+  font-size: 1rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.8rem;
+  padding: 3px 5px;
+  cursor: pointer;
+}
