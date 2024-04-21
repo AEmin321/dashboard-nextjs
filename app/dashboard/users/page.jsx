@@ -15,6 +15,52 @@ const Users = () => {
           </button>
         </Link>
       </div>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Role</td>
+            <td>Created At</td>
+            <td>Status</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <img
+                  className={styles.userImg}
+                  src="/profile.jpg"
+                  width={40}
+                  height={40}
+                  alt="profile photo"
+                />
+                Elif Kaya
+              </div>
+            </td>
+            <td>Elifkaya@gmail.com</td>
+            <td>Admin</td>
+            <td>12.12.2024</td>
+            <td>Active</td>
+            <td>
+              <div className={styles.btns}>
+                <Link href="/">
+                  <button className={`${styles.btn} ${styles.more}`}>
+                    More
+                  </button>
+                </Link>
+                <Link href="/">
+                  <button className={`${styles.btn} ${styles.remove}`}>
+                    Remove
+                  </button>
+                </Link>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
