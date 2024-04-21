@@ -1,0 +1,60 @@
+.container {
+  margin-top: 1.5rem;
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--txt-primary);
+  background-color: var(--bg-alt);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.table {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.table thead {
+  color: var(--txt-secondary);
+  margin-bottom: 1rem;
+}
+.table td {
+  padding: 6px;
+}
+.product {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.productImg {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.btns {
+  display: flex;
+  gap: 0.5rem;
+}
+.btn {
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: none;
+  color: var(--txt-primary);
+  cursor: pointer;
+}
+.remove {
+  background-color: #f73859;
+}
+.more {
+  background-color: var(--main-color);
+  color: var(--bg-primary);
+}
