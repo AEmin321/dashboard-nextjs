@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border: 2px solid var(--bg-alt);
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.imgContainer {
+  flex: 1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+.userImg {
+  border-radius: 5px;
+}
+.form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.form input,
+.form textarea,
+.form select {
+  padding: 7px 10px;
+  background-color: var(--bg-alt);
+  border-radius: 5px;
+  border: none;
+  color: var(--txt-primary);
+  margin-top: 5px;
+}
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: 2px solid var(--main-color);
+}
+.form label {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.form button {
+  padding: 6px 12px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  border: none;
+  margin-top: 12px;
+  width: 100%;
+  cursor: pointer;
+}

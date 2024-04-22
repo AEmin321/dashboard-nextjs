@@ -48,7 +48,7 @@ const Users = () => {
             <td>Active</td>
             <td>
               <div className={styles.btns}>
-                <Link href="/">
+                <Link href="/dashboard/users/elif">
                   <button className={`${styles.btn} ${styles.more}`}>
                     More
                   </button>
