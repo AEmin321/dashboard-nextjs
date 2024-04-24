@@ -6,8 +6,9 @@ import Image from "next/image";
 import { MdAddBox } from "react-icons/md";
 import { fetchUsers } from "@/app/lib/fetchData";
 
-const Users = async () => {
-  const users = await fetchUsers();
+const Users = async ({ searchParams }) => {
+  const query = searchParams?.q || "";
+  const users = await fetchUsers(query);
   console.log(users);
   return (
     <div className={styles.container}>
