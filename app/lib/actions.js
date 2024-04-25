@@ -78,3 +78,23 @@ export const deleteUser = async (formData) => {
   }
   revalidatePath("/dashboard/users");
 };
+
+export const getSingleUser = async (id) => {
+  try {
+    connectToMongo();
+    const user = await User.findById(id);
+    return user;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getSingleProduct = async (id) => {
+  try {
+    connectToMongo();
+    const product = await Product.findById(id);
+    return product;
+  } catch (error) {
+    console.log(error);
+  }
+};

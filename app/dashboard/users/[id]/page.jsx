@@ -1,18 +1,22 @@
 import Image from "next/image";
 import styles from "@/app/ui/dashboard/users/userDetails/userDetails.module.css";
+import { getSingleUser } from "@/app/lib/actions";
 
-const UserDetails = () => {
+const UserDetails = ({ params }) => {
+  const { id } = params;
+  const user = getSingleUser(id);
+
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
           className={styles.userImg}
-          src="/product.jpg"
+          src={user.img || "/product.jpg"}
           width={128}
           height={128}
           alt="profile image of a user"
         />
-        Elif Kaya
+        {user.username}
       </div>
       <form className={styles.form}>
         <label htmlFor="">Username</label>
