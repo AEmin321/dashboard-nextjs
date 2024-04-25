@@ -44,7 +44,7 @@ const Users = async ({ searchParams }) => {
                 <div className={styles.user}>
                   <Image
                     className={styles.userImg}
-                    src={user.img}
+                    src={user.img || "/profile.jpg"}
                     width={40}
                     height={40}
                     alt="profile photo"
@@ -58,7 +58,7 @@ const Users = async ({ searchParams }) => {
               <td>{user.isActive ? "Active" : "Passive"}</td>
               <td>
                 <div className={styles.btns}>
-                  <Link href="/dashboard/users/elif">
+                  <Link href={`/dashboard/users/${user._id}`}>
                     <button className={`${styles.btn} ${styles.more}`}>
                       More
                     </button>

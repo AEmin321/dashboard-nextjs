@@ -1,3 +1,4 @@
+import { addUser } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.css";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ const AddUser = () => {
           alt="place holder image of a user."
         />
       </div>
-      <form className={styles.form} action="#">
+      <form className={styles.form} action={addUser}>
         <input type="text" placeholder="Username" name="username" required />
         <input type="email" placeholder="Email" name="email" required />
         <input
