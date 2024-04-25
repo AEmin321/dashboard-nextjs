@@ -1,5 +1,6 @@
 import styles from "@/app/ui/login/login.module.css";
 import { MdLogin } from "react-icons/md";
+import { authenticate } from "../lib/actions";
 
 const page = () => {
   return (
@@ -8,7 +9,7 @@ const page = () => {
         <div className={styles.logo}>
           <h3>MeWowDash.</h3>
         </div>
-        <form action="" className={styles.form}>
+        <form action={authenticate} className={styles.form}>
           <div className={styles.loginTxt}>Login</div>
           <input type="text" name="username" placeholder="Username" />
           <input type="password" name="password" placeholder="Password" />

@@ -5,6 +5,7 @@ import Product from "./models/Product";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import bcrypt from "bcrypt";
+import { signIn } from "@/auth";
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, isAdmin, isActive, address } =
@@ -148,6 +149,15 @@ export const getSingleProduct = async (id) => {
     connectToMongo();
     const product = await Product.findById(id);
     return product;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const authenticate = async (formData) => {
+  const { username, password } = Object.fromEntries(formData);
+  try {
+    await signIn("credentials", { username, password });
   } catch (error) {
     console.log(error);
   }

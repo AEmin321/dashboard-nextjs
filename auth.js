@@ -20,10 +20,10 @@ const login = async (credentials) => {
     if (!isPassCorrect) {
       throw new Error("Wrong password.");
     }
+    return user;
   } catch (error) {
     console.log(error);
   }
-  return user;
 };
 
 export const { signIn, signOut, auth } = NextAuth({
