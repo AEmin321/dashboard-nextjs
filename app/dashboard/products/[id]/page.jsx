@@ -10,7 +10,7 @@ const ProductDetails = async ({ params }) => {
       <div className={styles.imgContainer}>
         <Image
           className={styles.productImg}
-          src="/product.jpg"
+          src={product.img || "/product.jpg"}
           width={128}
           height={128}
           alt="profile image of a user"
