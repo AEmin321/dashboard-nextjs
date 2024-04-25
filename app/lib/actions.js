@@ -82,6 +82,33 @@ export const updateProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
+export const updateUser = async (formData) => {
+  const { id, username, email, password, phone, isAdmin, isActive, address } =
+    Object.fromEntries(formData);
+  try {
+    connectToMongo();
+
+    const updateFields = {
+      username,
+      email,
+      password,
+      phone,
+      isAdmin,
+      isActive,
+      address,
+    };
+    Object.keys(updateFields).forEach((key) => {
+      (updateFields[key] === "" || undefined) && delete updateFields[key];
+    });
+
+    await User.findByIdAndUpdate(id, updateFields);
+  } catch (error) {
+    console.log(error);
+  }
+  revalidatePath("/dashboard/users");
+  redirect("/dashboard/users");
+};
+
 export const deleteProduct = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
