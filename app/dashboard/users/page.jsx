@@ -5,6 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Image from "next/image";
 import { MdAddBox } from "react-icons/md";
 import { fetchUsers } from "@/app/lib/fetchData";
+import { deleteUser } from "@/app/lib/actions";
 
 const Users = async ({ searchParams }) => {
   const query = searchParams?.q || "";
@@ -63,11 +64,12 @@ const Users = async ({ searchParams }) => {
                       More
                     </button>
                   </Link>
-                  <Link href="/">
+                  <form action={deleteUser}>
+                    <input type="hidden" name="id" value={user.id} />
                     <button className={`${styles.btn} ${styles.remove}`}>
                       Remove
                     </button>
-                  </Link>
+                  </form>
                 </div>
               </td>
             </tr>
