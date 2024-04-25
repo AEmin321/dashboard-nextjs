@@ -55,6 +55,33 @@ export const addProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
+export const updateProduct = async (formData) => {
+  const { id, title, size, description, price, stock, category, color } =
+    Object.fromEntries(formData);
+  try {
+    connectToMongo();
+
+    const updateFields = {
+      title,
+      size,
+      desc: description,
+      price,
+      stock,
+      category,
+      color,
+    };
+    Object.keys(updateFields).forEach((key) => {
+      (updateFields[key] === "" || undefined) && delete updateFields[key];
+    });
+
+    await Product.findByIdAndUpdate(id, updateFields);
+  } catch (error) {
+    console.log(error);
+  }
+  revalidatePath("/dashboard/products");
+  redirect("/dashboard/products");
+};
+
 export const deleteProduct = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
