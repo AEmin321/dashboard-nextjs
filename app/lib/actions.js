@@ -54,3 +54,15 @@ export const addProduct = async (formData) => {
   revalidatePath("/dashboard/products");
   redirect("/dashboard/products");
 };
+
+export const deleteProduct = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToMongo();
+    await Product.findByIdAndDelete(id);
+  } catch (error) {
+    console.log(error);
+  }
+  revalidatePath("/dashboard/products");
+};

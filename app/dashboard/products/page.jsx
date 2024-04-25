@@ -5,6 +5,7 @@ import Image from "next/image";
 import Search from "@/app/ui/dashboard/search/search";
 import { MdAddBox } from "react-icons/md";
 import { fetchProducts } from "@/app/lib/fetchData";
+import { deleteProduct } from "@/app/lib/actions";
 
 const Products = async ({ searchParams }) => {
   const query = searchParams?.q || "";
@@ -62,11 +63,12 @@ const Products = async ({ searchParams }) => {
                       More
                     </button>
                   </Link>
-                  <Link href="/">
+                  <form action={deleteProduct}>
+                    <input type="hidden" name="id" value={product.id} />
                     <button className={`${styles.btn} ${styles.remove}`}>
                       Remove
                     </button>
-                  </Link>
+                  </form>
                 </div>
               </td>
             </tr>
