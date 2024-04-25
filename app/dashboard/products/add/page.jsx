@@ -1,3 +1,4 @@
+import { addProduct } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/products/addProduct/addProduct.module.css";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ const AddProduct = () => {
           alt="place holder image of a product."
         />
       </div>
-      <form className={styles.form} action="#">
+      <form className={styles.form} action={addProduct}>
         <input type="text" placeholder="Title" name="title" required />
         <input type="text" placeholder="Size" name="size" />
         <textarea
