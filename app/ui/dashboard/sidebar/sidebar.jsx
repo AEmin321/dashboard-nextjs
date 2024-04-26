@@ -14,6 +14,7 @@ import {
   MdHelp,
   MdLogout,
 } from "react-icons/md";
+import { auth, signOut } from "@/auth";
 
 const sideLinks = [
   {
@@ -78,7 +79,10 @@ const sideLinks = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = async () => {
+  const { user } = await auth();
+  const session = await auth();
+  console.log(session);
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>MeWowDash.</div>
@@ -98,20 +102,27 @@ const Sidebar = () => {
         <div className={styles.profile}>
           <Image
             className={styles.userImage}
-            src="/profile.jpg"
+            src={user.img || "/profile.jpg"}
             width={40}
             height={40}
             alt="profile photo"
           />
           <div className={styles.userInfo}>
-            <span className={styles.username}>Elif</span>
-            <span className={styles.role}>Admin</span>
+            <span className={styles.username}>{user.username}</span>
+            <span className={styles.role}>Administrator</span>
           </div>
         </div>
-        <button className={styles.logoutBtn}>
-          <MdLogout fontSize="1.5rem" />
-          <span className={styles.logoutTxt}>Log out</span>
-        </button>
+        <form
+          action={async () => {
+            "use server";
+            await signOut();
+          }}
+        >
+          <button className={styles.logoutBtn}>
+            <MdLogout fontSize="1.5rem" />
+            <span className={styles.logoutTxt}>Log out</span>
+          </button>
+        </form>
       </div>
     </div>
   );
