@@ -1,5 +1,5 @@
 .container {
-  position: sticky;
+  position: fixed;
 }
 .logoContainer {
   color: var(--main-color);

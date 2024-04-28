@@ -14,7 +14,7 @@ import {
   MdHelp,
   MdLogout,
 } from "react-icons/md";
-import { auth, signOut } from "@/auth";
+import { auth, signOut } from "@/app/auth.js";
 
 const sideLinks = [
   {
@@ -81,8 +81,6 @@ const sideLinks = [
 
 const Sidebar = async () => {
   const { user } = await auth();
-  const session = await auth();
-  console.log(session);
   return (
     <div className={styles.container}>
       <div className={styles.logoContainer}>MeWowDash.</div>
