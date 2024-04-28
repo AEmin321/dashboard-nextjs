@@ -1,5 +1,8 @@
 ## Preview
 
+![chrome_jUqfFJ32j7](https://github.com/AEmin321/dashboard-nextjs/assets/121065444/058aec4f-d9d9-42c8-85bf-83fc91196f1f)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
